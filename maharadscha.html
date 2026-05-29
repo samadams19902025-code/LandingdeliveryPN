@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maharadscha — Ihre Webseite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0e0d0b;
+      --surface: #1a1712;
+      --text: #f2ece0;
+      --muted: #7a6a55;
+      --accent: #c8856a;
+      --border: rgba(200, 133, 106, 0.15);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+    .container { max-width: 520px; margin: 0 auto; padding: 0 24px; }
+    .hero { padding: 72px 0 48px; text-align: center; }
+    .tag { display: inline-block; font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--accent); margin-bottom: 40px; padding: 6px 16px; border: 0.5px solid var(--border); border-radius: 2px; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 10vw, 62px); font-weight: 300; line-height: 1.08; letter-spacing: -0.02em; color: var(--text); margin-bottom: 28px; }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero p { font-size: 15px; line-height: 1.75; color: var(--muted); max-width: 380px; margin: 0 auto; }
+    .rule { width: 1px; height: 60px; background: var(--border); margin: 40px auto; }
+    .video-section { padding-bottom: 56px; }
+    .video-frame { position: relative; width: 100%; padding-bottom: 56.25%; background: var(--surface); border: 0.5px solid var(--border); border-radius: 3px; overflow: hidden; }
+    .video-frame iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .video-caption { text-align: center; margin-top: 12px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .stat-section { padding: 16px 0 56px; text-align: center; }
+    .stat-number { font-family: 'Cormorant Garamond', serif; font-size: clamp(72px, 18vw, 108px); font-weight: 300; line-height: 1; color: var(--accent); letter-spacing: -0.04em; }
+    .stat-label { margin-top: 12px; font-size: 13px; line-height: 1.75; color: var(--muted); max-width: 280px; margin-left: auto; margin-right: auto; }
+    .site-section { padding-bottom: 24px; }
+    .site-btn { display: block; width: 100%; padding: 20px 24px; background: transparent; border: 0.5px solid var(--border); border-radius: 3px; color: var(--text); text-decoration: none; text-align: center; transition: border-color 0.25s, background 0.25s; }
+    .site-btn:hover { border-color: var(--accent); background: rgba(200, 133, 106, 0.04); }
+    .site-btn-main { font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 400; }
+    .site-btn-sub { display: block; margin-top: 6px; font-size: 12px; color: var(--muted); font-style: italic; letter-spacing: 0; text-transform: none; }
+    .cta-section { padding: 40px 0 80px; text-align: center; }
+    .cta-intro { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; font-style: italic; line-height: 1.4; color: var(--text); margin-bottom: 32px; }
+    .cta-btn { display: inline-block; padding: 17px 44px; background: var(--accent); color: var(--bg); text-decoration: none; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: opacity 0.2s; }
+    .cta-btn:hover { opacity: 0.82; }
+    .cta-footnote { margin-top: 20px; font-size: 12px; color: var(--muted); font-style: italic; line-height: 1.7; }
+    footer { border-top: 0.5px solid var(--border); padding: 24px; text-align: center; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    .hero          { animation: fadeUp 0.8s 0.0s ease both; }
+    .video-section { animation: fadeUp 0.8s 0.1s ease both; }
+    .stat-section  { animation: fadeUp 0.8s 0.2s ease both; }
+    .site-section  { animation: fadeUp 0.8s 0.3s ease both; }
+    .cta-section   { animation: fadeUp 0.8s 0.4s ease both; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <section class="hero">
+    <span class="tag">Maharadscha Indisches Restaurant · Leipzig</span>
+    <h1>Jemand sucht<br>gerade ein indisches Restaurant.<br><em>Er findet Sie nicht.</em></h1>
+    <p>Jeden Monat suchen hunderte Menschen in Leipzig nach einem indischen Restaurant. Die meisten kennen das Maharadscha nicht — weil sie Sie nicht finden.</p>
+  </section>
+
+  <div class="rule"></div>
+
+  <section class="video-section">
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/g-yZCeyNSfM" allowfullscreen></iframe>
+    </div>
+    <p class="video-caption">90 Sekunden — schauen Sie rein</p>
+  </section>
+
+  <section class="stat-section">
+    <div class="stat-number">600</div>
+    <p class="stat-label">Menschen suchen jeden Monat in Leipzig<br>nach einem indischen Restaurant — und finden Sie nicht.</p>
+  </section>
+
+  <section class="site-section">
+    <a href="http://maharadscha.enricowebdigital.com/ML.html" target="_blank" class="site-btn">
+      <span class="site-btn-main">Ihre fertige Webseite ansehen →</span>
+      <span class="site-btn-sub">Vollständig. Heute. Mit Ihren Daten.</span>
+    </a>
+  </section>
+
+  <section class="cta-section">
+    <p class="cta-intro">Gefällt Ihnen,<br>was Sie sehen?</p>
+    <a href="https://calendly.com/samadams19902025/new-meeting" target="_blank" class="cta-btn">15 Minuten buchen</a>
+    <p class="cta-footnote">Kein Druck. Kein Vertrag. Nur ein kurzes Gespräch.<br>Sie schulden mir nichts dafür.</p>
+  </section>
+
+</div>
+<footer>Enrico · enricowebdigital.com</footer>
+</body>
+</html>
